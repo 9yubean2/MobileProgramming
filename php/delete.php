@@ -15,7 +15,7 @@
       $userNum = $_POST[ 'userNum' ];
       
     
-      $jb_conn = mysqli_connect("sc1.swu.ac.kr:13306", "dlrbqls3024", "dlrbqls302485", "dlrbqls3024_ts")or die("MySQL 접속 실패 !!");
+      $jb_conn = mysqli_connect("dburl", "dbid", "dbpw", "dlrbqls3024_ts")or die("MySQL 접속 실패 !!");
       $jb_sql = "DELETE FROM userInfo WHERE userNum='".$userNum."'";
       $ret = mysqli_query( $jb_conn, $jb_sql );
       echo "<h1> Delete </h1>";
