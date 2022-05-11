@@ -5,18 +5,18 @@
 <%@ page import="org.json.simple.parser.JSONParser"%>
 <%@ page import="org.json.simple.parser.ParseException"%>
 <%
-    String DB_URL = "jdbc:mysql://sc1.swu.ac.kr:13306/dlrbqls3024_ts";
-    String DB_USER = "dlrbqls3024";
-    String DB_PASSWORD = "dlrbqls302485";
+    String DB_URL = "DB_URL";
+    String DB_USER = "DB_USER";
+    String DB_PASSWORD = "DB_PASSWORD";
     String sql = null; 
     Connection conn = null;
     PreparedStatement stmt = null;
     ResultSet rs = null;
     try {   
         Class.forName("org.mariadb.jdbc.Driver");
-        System.out.println("靛扼捞滚 肺爹 己傍");
+        System.out.println("霌滊澕鞚措矂 搿滊敥 靹标车");
         conn = DriverManager.getConnection(DB_URL, DB_USER, DB_PASSWORD);
-        System.out.println("立加 己傍");
+        System.out.println("鞝戩啀 靹标车");
         //stmt = conn.createStatement();
  
         String userName_json = request.getParameter("userName_json");
@@ -60,7 +60,7 @@
 
       
     } catch (Exception e) {
-        System.out.println("立加 角菩");
+        System.out.println("鞝戩啀 鞁ろ尐");
         e.printStackTrace();
     }
     finally {
