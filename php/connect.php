@@ -31,7 +31,7 @@
       </thead>
       <tbody>
         <?php
-          $jb_conn = mysqli_connect( 'sc1.swu.ac.kr:13306', 'dlrbqls3024', 'dlrbqls302485', 'dlrbqls3024_ts' );
+          $jb_conn = mysqli_connect( 'dburl', 'db id', 'db pw', 'dlrbqls3024_ts' );
           $jb_sql = "SELECT * FROM userInfo;";
           $jb_result = mysqli_query( $jb_conn, $jb_sql );
           while( $jb_row = mysqli_fetch_array( $jb_result ) ) {
