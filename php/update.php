@@ -18,7 +18,7 @@
       $userAge = $_POST[ 'userAge' ];
       $userBirthDate = $_POST[ 'userBirthDate' ];
     
-      $jb_conn = mysqli_connect("sc1.swu.ac.kr:13306", "dlrbqls3024", "dlrbqls302485", "dlrbqls3024_ts")or die("MySQL 접속 실패 !!");
+      $jb_conn = mysqli_connect("dburl", "dbid", "dbpw", "dlrbqls3024_ts")or die("MySQL 접속 실패 !!");
       $jb_sql = "UPDATE userInfo SET userPassword='".$userPassword."', userName='".$userName."', userAge='".$userAge."', userBirthDate='".$userBirthDate."' WHERE userNum='".$userNum."'";
       $ret = mysqli_query( $jb_conn, $jb_sql );
       echo "<h1> Update </h1>";
