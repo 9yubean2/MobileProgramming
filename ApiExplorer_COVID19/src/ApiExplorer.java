@@ -14,7 +14,7 @@ import org.json.JSONObject;
 public class ApiExplorer {
 	public static void main(String[] args) throws IOException {
     	StringBuilder urlBuilder = new StringBuilder("http://openapi.data.go.kr/openapi/service/rest/Covid19/getCovid19SidoInfStateJson"); /*URL*/
-        String key = "h9OgLAuWAahB0K4J6doGQEb46fihzQkfGzWJjJ%2BGPIv6vy97pM7p4wWvG5NiRnUHmSp4mwj9EWNdkD%2BgKVKljQ%3D%3D";
+        String key = "ServiceKey";
         urlBuilder.append("?" + URLEncoder.encode("serviceKey","UTF-8") + "=" + key); /*Service Key*/
         urlBuilder.append("&" + URLEncoder.encode("pageNo","UTF-8") + "=" + URLEncoder.encode("3", "UTF-8")); /*페이지번호*/
         urlBuilder.append("&" + URLEncoder.encode("numOfRows","UTF-8") + "=" + URLEncoder.encode("10", "UTF-8")); /*한 페이지 결과 수*/
