@@ -19,7 +19,7 @@
       $userName_parsing = $arr["name"];
       //echo $userName_parsing;
       
-      $jb_conn = mysqli_connect("sc1.swu.ac.kr:13306", "dlrbqls3024", "dlrbqls302485", "dlrbqls3024_ts")or die("MySQL 접속 실패 !!");
+      $jb_conn = mysqli_connect("dburl", "dbid", "dbpw", "dlrbqls3024_ts")or die("MySQL 접속 실패 !!");
       $jb_sql ="SELECT * FROM userInfo WHERE userName='".$userName_parsing."'";
       $jb_result = mysqli_query( $jb_conn, $jb_sql );
       echo "<h1> Search </h1>";
