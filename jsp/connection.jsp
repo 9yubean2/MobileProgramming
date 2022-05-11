@@ -10,9 +10,9 @@
 	<%
 		// 연결하기
 		Connection connection = null;
-		String url="jdbc:mysql://sc1.swu.ac.kr:13306/dlrbqls3024_ts";
-		String user="dlrbqls3024";
-		String password="dlrbqls302485";
+		String url="db url";
+		String user="db id";
+		String password="db pw";
 		
 		Class.forName("org.mariadb.jdbc.Driver");
 		connection = DriverManager.getConnection(url, user, password);
