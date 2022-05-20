@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<network-security-config>
+    <!--믿을 수 있는 도메인만 추가-->
+    <!--<domain-config cleartextTrafficPermitted = "true">
+        <domain includeSubdomains="true">sc1.swu.ac.kr</domain>
+    </domain-config>-->
+    <!--모든 http 연결을 허가-->
+
+    <base-config cleartextTrafficPermitted = "true"/>
+</network-security-config>
