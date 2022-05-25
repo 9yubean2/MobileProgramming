@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Output UserInfo</title>
+    </head>
+    <body>
+        <?php
+        $SearchWord = $_POST['SearchWord'];
+        $SearchWord_jason = jason_decode($SearchWord);
+        $UserName = $SearchWord_jason->UserName;
+
+        $con = mysqli_connectmysqli_connect("sc1.swu.ac.kr:13306", "dlrbqls3024", "dlrbqls302485", "dlrbqls3024_ts")or die("MySQL 접속 실패 !!");
+        mysqli_set_charset($con,"utf8");
+        $res = mysqli_query($con, "SELECT * FROM UserInfo WHERE UserName='$UserName'");
+        $result = array();
+        while($row = mysqli_fetch_array($res)) {
+            array_push($result, array('UserNum'=>$row[0], 'UserName'=>$row[1], 'UserBirth'=>$row[2], 'UserAge'=>$row[3]));
+        }
+        echo json_encode(array("result"=>$result));
+        mysqli_close($con);
+        ?>
+    </body>
+</html>
